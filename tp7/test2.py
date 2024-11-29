@@ -69,6 +69,16 @@ class TestFraction(unittest.TestCase):
         frac2 = Fraction(5, 2)
         self.assertFalse(frac2.is_integer(), "Test is_integer : fraction non entière")
 
+    def test_as_mixed_number(self):
+
+
+        frac2 = Fraction(1, 3)
+        self.assertEqual(frac2.as_mixed_number(), "1/3", "Test as_mixed_number : fraction propre")
+
+
+        frac3 = Fraction(7, 3)  
+        self.assertEqual(frac3.as_mixed_number(), "2 + 1/3", "Test as_mixed_number : fraction impropre")
+
 if __name__ == "__main__":
     unittest.main()
 
