@@ -91,7 +91,7 @@ class TestFraction(unittest.TestCase):
         self.assertFalse(frac2.is_unit(), "Test is_unit : fraction non unitaire")
 
     def test_is_adjacent_to(self):
-        # Test si deux fractions sont adjacentes
+        
         frac1 = Fraction(1, 2)
         frac2 = Fraction(2, 3)
         self.assertTrue(frac1.is_adjacent_to(frac2), "Test is_adjacent_to : fractions adjacentes")
