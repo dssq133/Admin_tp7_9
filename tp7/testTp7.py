@@ -2,7 +2,7 @@ from tp7 import Fraction
 
 def main():
     try:
-        # Création de fractions
+
         f1 = Fraction(1, 2)
         f2 = Fraction(3, 4)
         f3 = Fraction(5, 1)
