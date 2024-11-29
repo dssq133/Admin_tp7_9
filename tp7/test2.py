@@ -76,9 +76,27 @@ class TestFraction(unittest.TestCase):
         self.assertEqual(frac2.as_mixed_number(), "1/3", "Test as_mixed_number : fraction propre")
 
 
-        frac3 = Fraction(7, 3)  
+        frac3 = Fraction(7, 3)
         self.assertEqual(frac3.as_mixed_number(), "2 + 1/3", "Test as_mixed_number : fraction impropre")
+
+    def test_is_proper(self):
+
+
+        frac2 = Fraction(5, 4)
+        self.assertFalse(frac2.is_proper(), "Test is_proper : fraction non propre")
+
+    def test_is_unit(self):
+
+        frac2 = Fraction(2, 1)
+        self.assertFalse(frac2.is_unit(), "Test is_unit : fraction non unitaire")
+
+    def test_is_adjacent_to(self):
+        # Test si deux fractions sont adjacentes
+        frac1 = Fraction(1, 2)
+        frac2 = Fraction(2, 3)
+        self.assertTrue(frac1.is_adjacent_to(frac2), "Test is_adjacent_to : fractions adjacentes")
+
+       
 
 if __name__ == "__main__":
     unittest.main()
-
