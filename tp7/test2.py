@@ -69,3 +69,6 @@ class TestFraction(unittest.TestCase):
         frac2 = Fraction(5, 2)
         self.assertFalse(frac2.is_integer(), "Test is_integer : fraction non entière")
 
+if __name__ == "__main__":
+    unittest.main()
+
